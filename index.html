@@ -7,7 +7,7 @@
     <style>
         body {
             font-family: Arial, sans-serif;
-            background-color: #f8f9fa;
+            background-color: #94b9df;
             text-align: center;
             padding: 20px;
         }
@@ -18,11 +18,20 @@
             margin: 10px;
             padding: 10px 20px;
             font-size: 16px;
+            border: none;
+            border-radius: 5px;
+            background-color: #f8f9fa;
+            color: #333;
             cursor: pointer;
+        }
+        .btn-yes {
+            background-color: #4CAF50;
+            color: white;
         }
         .btn-no {
             position: relative;
-        }
+            background-color: #af534c;
+            color: white;
     </style>
 </head>
 <body>
@@ -39,8 +48,8 @@
         function runAway() {
             const btnNo = document.querySelector('.btn-no');
             btnNo.style.position = 'absolute';
-            btnNo.style.top = `${Math.random() * window.innerHeight}px`;
-            btnNo.style.left = `${Math.random() * window.innerWidth}px`;
+            btnNo.style.top = `${Math.random() * window.innerHeight * 0.6}px`;
+            btnNo.style.left = `${Math.random() * window.innerWidth * 0.6}px`;
         }
     </script>
 </body>

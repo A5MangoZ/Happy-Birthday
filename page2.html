@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Letter 3</title>
+    <title>Letter 2</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -17,7 +17,7 @@
             margin: 20px auto;
             padding: 20px;
             border-radius: 10px;
-            background-color: #2196f3;
+            background-color: #f44336;
             color: white;
             cursor: pointer;
         }
@@ -26,27 +26,12 @@
             font-size: 18px;
             margin-top: 20px;
         }
-        .gift-box {
-            width: 150px;
-            height: 150px;
-            background-color: #ffc107;
-            margin: 20px auto;
-            position: relative;
-            border-radius: 10px;
+        .btn-next {
             display: none;
-        }
-        .confetti {
-            position: absolute;
-            width: 10px;
-            height: 10px;
-            background-color: #ffeb3b;
-            top: 0;
-            left: 50%;
-            animation: confetti-fall 3s infinite;
-        }
-        @keyframes confetti-fall {
-            0% { transform: translateY(0) rotate(0); }
-            100% { transform: translateY(100vh) rotate(360deg); }
+            margin-top: 20px;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
         }
     </style>
 </head>
@@ -56,22 +41,16 @@
         <p>Open me</p>
     </div>
     <div class="message">
-        <p>I'm grateful to have you. Thank you and Happy Birthday!</p>
-        <div class="gift-box">
-            <div class="confetti" style="animation-delay: 0s;"></div>
-            <div class="confetti" style="animation-delay: 0.5s;"></div>
-            <div class="confetti" style="animation-delay: 1s;"></div>
-        </div>
+        <p>I'm sorry I didn't prepare this birthday letter earlier; I'm still embarrassed about the Valentine letter I gave you.</p>
     </div>
-    <button class="btn-next" onclick="finish()">Finish</button>
+    <button class="btn-next" onclick="goToPage('page3.html')">Next</button>
     <script>
         function showMessage() {
             document.querySelector('.message').style.display = 'block';
-            document.querySelector('.gift-box').style.display = 'block';
             document.querySelector('.btn-next').style.display = 'inline-block';
         }
-        function finish() {
-            alert('Happy Birthday!');
+        function goToPage(page) {
+            window.location.href = page;
         }
     </script>
 </body>

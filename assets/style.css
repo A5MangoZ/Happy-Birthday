@@ -1,3 +1,10 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@200;500;700;800;900;1000&display=swap");
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: "Nunito", sans-serif;
+}
 body {
     background-color: #94b9df;
 }
@@ -6,13 +13,13 @@ body {
     margin: 0;
     padding: 0;
     position: absolute;
-    top: 4%;
+    top: 5%;
     width: 100%;
     text-align: center;
-    font-size: 3em;
+    font-size: 2.5em;
     color: darkblue;
     letter-spacing: 0.1em;
-    font-family: 'Pacifico', cursive;
+
     background: -webkit-linear-gradient(#ffff00, #ff1493);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -27,7 +34,7 @@ body {
  
     50% {
         -webkit-filter: hue-rotate(360deg);
-        transform: scale(1.2) rotate(5deg);
+        transform: scale(1.1) rotate(2deg);
     }
 }
  
@@ -89,12 +96,12 @@ body {
     margin: 0;
     padding: 0;
     position: absolute;
-    top: 10%;
+    top: 25%;
     width: 100%;
     text-align: center;
     font-size: 1em;
     color: #2a0a0a;
-    font-family: 'Pacifico', cursive;
+    font-family: 'nunito';
 }
  
 .candle1 {
@@ -226,5 +233,8 @@ body {
     text-align: center;
     font-size: 1em;
     color: white;
-    font-family: 'Pacifico', cursive;
+    font-family: 'nunito';
+}
+@media screen and (max-width: 450px) {
+    
 }

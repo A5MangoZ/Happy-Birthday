@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Second Letter</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f9fa;
+            text-align: center;
+            padding: 20px;
+        }
+        .envelope {
+            width: 300px;
+            height: 200px;
+            margin: 20px auto;
+            padding: 20px;
+            border-radius: 10px;
+            background-color: #f44336;
+            color: white;
+            position: relative;
+            cursor: pointer;
+        }
+        .message {
+            display: none;
+            font-size: 18px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="envelope" onclick="showMessage()">
+        <p>Open me</p>
+    </div>
+    <div class="message">
+        <p>I'm sorry I didn't prepare this birthday letter earlier; I'm still embarrassed about the Valentine letter I gave you.</p>
+        <button onclick="window.location.href='page4.html'">Next</button>
+    </div>
+    <script>
+        function showMessage() {
+            document.querySelector('.message').style.display = 'block';
+        }
+    </script>
+</body>
+</html>

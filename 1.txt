@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f9fa;
+            text-align: center;
+            padding: 20px;
+        }
+        .question-container {
+            margin-top: 50px;
+        }
+        .btn-yes, .btn-no {
+            margin: 10px;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        .btn-no {
+            position: relative;
+        }
+    </style>
+</head>
+<body>
+    <h1>Happy Birthday!</h1>
+    <div class="question-container">
+        <p>Will you be my Valentine forever?</p>
+        <button class="btn-yes" onclick="window.location.href='page2.html'">Yes</button>
+        <button class="btn-no" onmouseover="runAway()">No</button>
+    </div>
+    <script>
+        function runAway() {
+            const btnNo = document.querySelector('.btn-no');
+            btnNo.style.position = 'absolute';
+            btnNo.style.top = `${Math.random() * window.innerHeight}px`;
+            btnNo.style.left = `${Math.random() * window.innerWidth}px`;
+        }
+    </script>
+</body>
+</html>

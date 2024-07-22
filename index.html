@@ -3,13 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200;500;700;800;900;1000&display=swap" rel="stylesheet">
     <title>Happy Birthday</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: Nunito;
             background-color: #94b9df;
             text-align: center;
             padding: 20px;
+        }
+        h1 {
+            color: #0c3527;
+            margin-top: 50px;
         }
         .question-container {
             margin-top: 50px;
@@ -18,6 +23,7 @@
             margin: 10px;
             padding: 10px 20px;
             font-size: 16px;
+            font-family: Nunito;
             border: none;
             border-radius: 5px;
             background-color: #f8f9fa;
@@ -25,6 +31,7 @@
             cursor: pointer;
         }
         .btn-yes {
+            position: static;
             background-color: #4CAF50;
             color: white;
         }
@@ -36,9 +43,9 @@
     </style>
 </head>
 <body>
-    <h1>Happy Birthday!</h1>
+    <h1>Sweetie, Are You Feeling Happy Today? 😢</h1>
     <div class="question-container">
-        <p>Will you be my Valentine forever?</p>
+        <p>.</p>
         <button class="btn-yes" onclick="goToPage('page1.html')">Yes</button>
         <button class="btn-no" onmouseover="runAway()">No</button>
     </div>

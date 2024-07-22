@@ -29,10 +29,13 @@
     <h1>Happy Birthday!</h1>
     <div class="question-container">
         <p>Will you be my Valentine forever?</p>
-        <button class="btn-yes" onclick="window.location.href='page2.html'">Yes</button>
+        <button class="btn-yes" onclick="goToPage('page1.html')">Yes</button>
         <button class="btn-no" onmouseover="runAway()">No</button>
     </div>
     <script>
+        function goToPage(page) {
+            window.location.href = page;
+        }
         function runAway() {
             const btnNo = document.querySelector('.btn-no');
             btnNo.style.position = 'absolute';

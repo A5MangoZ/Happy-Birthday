@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f9fa;
+            text-align: center;
+            padding: 20px;
+        }
+        .question-container {
+            margin-top: 50px;
+        }
+        .envelope {
+            display: none;
+            width: 300px;
+            height: 200px;
+            margin: 20px auto;
+            padding: 20px;
+            border-radius: 10px;
+            position: relative;
+            cursor: pointer;
+        }
+        .red-envelope {
+            background-color: #f44336;
+            color: white;
+        }
+        .blue-envelope {
+            background-color: #2196f3;
+            color: white;
+        }
+        .message {
+            display: none;
+            font-size: 18px;
+            margin-top: 20px;
+        }
+        .btn-yes, .btn-no {
+            margin: 10px;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        .btn-no {
+            position: relative;
+        }
+        .gift-box {
+            width: 150px;
+            height: 150px;
+            background-color: #ffc107;
+            margin: 20px auto;
+            position: relative;
+            border-radius: 10px;
+            display: none;
+        }
+        .confetti {
+            position: absolute;
+            width: 10px;
+            height: 10px;
+            background-color: #ffeb3b;
+            top: 0;
+            left: 50%;
+            animation: confetti-fall 3s infinite;
+        }
+        @keyframes confetti-fall {
+            0% { transform: translateY(0) rotate(0); }
+            100% { transform: translateY(100vh) rotate(360deg); }
+        }
+    </style>
+</head>
+<body>
+    <h1>Happy Birthday!</h1>
+    <div class="question-container">
+        <p>Will you be my Valentine forever?</p>
+        <button class="btn-yes" onclick="showEnvelopes()">Yes</button>
+        <button class="btn-no" onmouseover="runAway()">No</button>
+    </div>
+    <div class="envelope red-envelope" id="red-envelope1" onclick="showMessage('msg1')">
+        <p>Open me</p>
+    </div>
+    <div class="message" id="msg1">
+        <p>I'm sorry last year's birthday didn't go well, and I hope this birthday will be great.</p>
+    </div>
+    <div class="envelope red-envelope" id="red-envelope2" onclick="showMessage('msg2')">
+        <p>Open me</p>
+    </div>
+    <div class="message" id="msg2">
+        <p>I'm sorry I didn't prepare this birthday letter earlier; I'm still embarrassed about the Valentine letter I gave you.</p>
+    </div>
+    <div class="envelope blue-envelope" id="blue-envelope" onclick="showMessage('msg3')">
+        <p>Open me</p>
+    </div>
+    <div class="message" id="msg3">
+        <p>I'm grateful to have you. Thank you and Happy Birthday!</p>
+        <div class="gift-box">
+            <div class="confetti" style="animation-delay: 0s;"></div>
+            <div class="confetti" style="animation-delay: 0.5s;"></div>
+            <div class="confetti" style="animation-delay: 1s;"></div>
+        </div>
+    </div>
+    <script>
+        function showEnvelopes() {
+            document.querySelector('.question-container').style.display = 'none';
+            document.getElementById('red-envelope1').style.display = 'block';
+            document.getElementById('red-envelope2').style.display = 'block';
+            document.getElementById('blue-envelope').style.display = 'block';
+        }
+        function showMessage(id) {
+            document.getElementById(id).style.display = 'block';
+            if (id === 'msg3') {
+                document.querySelector('.gift-box').style.display = 'block';
+            }
+        }
+        function runAway() {
+            const btnNo = document.querySelector('.btn-no');
+            btnNo.style.position = 'absolute';
+            btnNo.style.top = `${Math.random() * window.innerHeight}px`;
+            btnNo.style.left = `${Math.random() * window.innerWidth}px`;
+        }
+    </script>
+</body>
+</html>

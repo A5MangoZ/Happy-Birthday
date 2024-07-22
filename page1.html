@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>First Letter</title>
+    <title>Letter 1</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -19,7 +19,6 @@
             border-radius: 10px;
             background-color: #f44336;
             color: white;
-            position: relative;
             cursor: pointer;
         }
         .message {
@@ -27,19 +26,31 @@
             font-size: 18px;
             margin-top: 20px;
         }
+        .btn-next {
+            display: none;
+            margin-top: 20px;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
     </style>
 </head>
 <body>
+    <h1>Happy Birthday!</h1>
     <div class="envelope" onclick="showMessage()">
         <p>Open me</p>
     </div>
     <div class="message">
         <p>I'm sorry last year's birthday didn't go well, and I hope this birthday will be great.</p>
-        <button onclick="window.location.href='page3.html'">Next</button>
     </div>
+    <button class="btn-next" onclick="goToPage('page2.html')">Next</button>
     <script>
         function showMessage() {
             document.querySelector('.message').style.display = 'block';
+            document.querySelector('.btn-next').style.display = 'inline-block';
+        }
+        function goToPage(page) {
+            window.location.href = page;
         }
     </script>
 </body>
